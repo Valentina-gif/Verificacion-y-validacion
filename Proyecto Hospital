@@ -2,6 +2,7 @@ public Paciente() {
         initComponents();
         cargarCbx();
         FtnBuscarBD();
+        //Holi Valen caretamal
     }
      public void limpiar() 
     {
