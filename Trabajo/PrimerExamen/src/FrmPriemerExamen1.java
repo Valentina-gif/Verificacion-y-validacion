@@ -73,16 +73,8 @@ public class FrmPriemerExamen1 extends javax.swing.JFrame
         Connection cnx = con.conectar();
         Statement st;
         try {
-            String Documento = TxtDocumento.getText();
-            String Nombres = TxtNombres.getText();
-            String Apellidos = TxtApellidos.getText();           
-            String Correo = TxtCorreo.getText();
-            String Telefono = TxtTelefono.getText();
-            int Eps = CbxEps.getSelectedIndex();
-            
-
             st = cnx.createStatement();
-            st.executeUpdate("INSERT INTO tblpacientes VALUES('" + Documento + "','" + Nombres + "','" + Apellidos + "','" + fn1 + "','" +Correo + "','"+Telefono+"','"+Eps+"');");
+            st.executeUpdate("INSERT INTO tblpacientes VALUES('" +  TxtDocumento.getText() + "','" + TxtNombres.getText() +"','" + TxtApellidos.getText() + "','" + fn1 + "','" +TxtCorreo.getText() + "','"+TxtTelefono.getText()+"','"+CbxEps.getSelectedIndex()+"');");
             System.out.println("listo");
             JOptionPane.showMessageDialog(null, "codigo guardado exitosamente");
             Limpiar();
